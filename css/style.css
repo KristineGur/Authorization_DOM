@@ -1,0 +1,81 @@
+.container {
+  position: relative;
+  min-height: 100vh;
+  background-color: #1c1c1c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#auth-button,
+.authoriz_butt {
+  background-color: #F70628;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  border-radius: 12px;
+  color: white;
+  height: 56px;
+  min-width: 200px;
+  cursor: pointer;
+  font-size: 15px
+}
+
+.modal {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 640px;
+  height: 495px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  overflow: hidden;
+  animation-name: openModal;
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+
+  animation-name: showModal;
+  animation-duration: 1.15s;
+  animation-fill-mode: forwards;
+}
+
+.modal>.header {
+  height: 65px;
+  background-color: #F5F7FC;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.modal>.header>.title {
+  font-size: 20px;
+}
+
+.modal>.header>.close {
+  width: 35px;
+  height: 35px;
+  background-color: #F70628;
+  border-radius: 4px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+
+@keyframes showModal {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
